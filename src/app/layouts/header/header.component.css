@@ -2,13 +2,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  min-height: var(--header-min-height);
   padding: 10px var(--base-padding);
   border-bottom: 1px solid var(--main-text-color);
   background-color: var(--main-component-color);
 }
 
 .router-info {
-  font-weight: bold;
+  font-size: 16px;
 }
 
 .select-info {

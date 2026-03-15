@@ -11,6 +11,7 @@ import { MenuStateService } from '../../core/services/menu-state.service';
 })
 export class Header {
   currentPage: string = '';
+  currentPageUrl: string = '';
 
   constructor(
     public menuStateService: MenuStateService,
@@ -20,6 +21,7 @@ export class Header {
       .pipe(filter((event) => event instanceof NavigationEnd))
       .subscribe((event) => {
         this.currentPage = this.getPageTitle(event.urlAfterRedirects);
+        this.currentPageUrl = event.urlAfterRedirects;
       });
   }
 
@@ -27,5 +29,8 @@ export class Header {
     return url === '/select' ? 'Чеклист' : 'Главная';
   }
 
-  readonly getCurrentPage = (): string => this.currentPage;
+  readonly getCurrentPageInfo = (): { title: string; url: string } => ({
+    title: this.currentPage,
+    url: this.currentPageUrl,
+  });
 }

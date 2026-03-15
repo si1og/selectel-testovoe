@@ -20,8 +20,8 @@
 
   --sidebar-width: 200px;
   --base-padding: 20px;
-  --page-padding: 42px;
   --base-font-size: 16px;
+  --header-min-height: 75px;
 
   --base-font-family: 'Source Sans Variable', 'Source Sans Pro', sans-serif;
 }
