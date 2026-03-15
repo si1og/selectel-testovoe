@@ -28,8 +28,8 @@ ol,
 button,
 input,
 textarea {
-  font-family: 'Source Sans Variable', 'Source Sans Pro', sans-serif;
-  color: var(--text-color-1);
+  font-family: var(--base-font-family);
+  color: var(--main-text-color);
 }
 
 a,
