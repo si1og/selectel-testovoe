@@ -1,13 +1,12 @@
-<main>
-  <ul>
-    @for (item of menuItems(); track item.id) {
-    <li>
-      <div>
-        <input type="checkbox" [checked]="item.selected" (change)="menuStateService.toggleItem(item.id)" />
-        <label>{{ item.name }}</label>
-      </div>
-      <span>Value: {{ item.value }}</span>
-    </li>
-    }
-  </ul>
-</main>
+
+<ul>
+  @for (item of menuItems(); track item.id) {
+  <li>
+      <input type="checkbox" [checked]="item.selected" [id]="`item-${item.id}`" (change)="menuStateService.toggleItem(item.id)" />
+      <label [for]="`item-${item.id}`" class="checkbox-data">
+        <div>{{ item.name }}</div>
+        <span>Value: {{ item.value }}</span>
+      </label>
+  </li>
+  }
+</ul>

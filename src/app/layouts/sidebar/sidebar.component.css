@@ -1,0 +1,17 @@
+.navbar {
+  border-right: 1px solid var(--main-text-color);
+  height: 100%;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+  padding: 20px;
+  margin: 0;
+}
+
+a.active {
+  font-weight: bold;
+}
