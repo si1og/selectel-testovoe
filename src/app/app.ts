@@ -3,9 +3,12 @@ import { RouterOutlet } from '@angular/router';
 import { MenuStateService, MenuItem } from './core/services/menu-state.service';
 import { HttpClient } from '@angular/common/http';
 
+import { Header } from './layouts/header/header.component';
+import { Sidebar } from './layouts/sidebar/sidebar.component';
+
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, Header, Sidebar],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })

@@ -1,0 +1,9 @@
+<header class="header">
+  <div class="router-info">
+    Раздел {{ getCurrentPage() }}
+  </div>
+  <ul class="select-info">
+    <li>Выбрано пунктов: {{ menuStateService.selectedItemsNumber() }}</li>
+    <li>Общее значение: {{ menuStateService.selectedItemsTotalValue() }}</li>
+  </ul>
+</header>

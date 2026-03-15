@@ -1,0 +1,13 @@
+<main>
+  <ul>
+    @for (item of menuItems(); track item.id) {
+    <li>
+      <div>
+        <input type="checkbox" [checked]="item.selected" (change)="menuStateService.toggleItem(item.id)" />
+        <label>{{ item.name }}</label>
+      </div>
+      <span>Value: {{ item.value }}</span>
+    </li>
+    }
+  </ul>
+</main>

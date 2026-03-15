@@ -25,10 +25,14 @@ export class MenuStateService {
     return this.items().filter((item) => item.selected).length;
   });
 
-  readonly selectedItemsValue = computed(() => {
+  readonly selectedItemsTotalValue = computed(() => {
     return this.items()
       .filter((item) => item.selected)
       .reduce((sum, item) => sum + item.value, 0);
+  });
+
+  readonly getItems = computed(() => {
+    return this.items();
   });
 
   showItems() {

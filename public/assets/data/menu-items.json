@@ -9,13 +9,13 @@
     "id": 2,
     "name": "Item 2",
     "value": 30,
-    "selected": false
+    "selected": true
   },
   {
     "id": 3,
     "name": "Item 3",
     "value": 40,
-    "selected": false
+    "selected": true
   },
   {
     "id": 4,
